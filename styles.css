@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --ff__main : 'Overpass', sans-serif;
+
+    --orange: hsl(25, 97%, 53%);
+    
+    --light__grey: hsl(217, 12%, 63%);
+    --medium__grey: hsl(216, 12%, 54%);
+
+    --dark__blue: hsl(213, 19%, 18%);
+    --dark__blue_bg: rgba(124, 135, 152, 0.176);
+
+    --very__dark__blue: hsl(216, 12%, 8%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    font-family: var(--ff__main);
+    background-color: var(--very__dark__blue);
+}
+
+.container {
+    margin: 1.5em;
+    padding: 1.5em;
+    border-radius: 1em;
+    background-color: var(--dark__blue);
+}
+
+.survey_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25em;
+}
+
+.survey_content div img {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    padding: .5em;
+    background-color: var(--dark__blue_bg);
+}
+
+h1 {
+    font-weight: 700;
+    color: white;
+}
+
+p {
+    color: var(--light__grey);
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+li {
+    color: var(--medium__grey);
+}
+
+button {
+    background-color: var(--orange);
+    padding: 1em;
+    border: none;
+    border-radius: 2em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    font-weight: 700;
+}
+
+.icon_background {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--dark__blue_bg);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.survey_text {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.survey_submit {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    text-align: center;
+}
+
+.survey_submit .rating {
+    font-size: 14px;
+    padding: .5em;
+    border-radius: 1em;
+    background-color: var(--dark__blue_bg);
+    color: var(--orange);
+    font-weight: 400;
+    display: inline;
+}
+
+.user_selected_rating {
+    display: inline;
+}
+
+.hidden {
+    display: none;
+}
+
+.selected {
+    background-color: var(--orange);
+    color: white;
+}
+
+@media screen and (min-width: 1000px){
+
+    body {
+        align-items: center;
+    }
+
+    .container {
+        max-width: 325px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+}
